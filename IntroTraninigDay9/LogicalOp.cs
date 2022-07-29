@@ -26,7 +26,7 @@ namespace IntroTraninigDay9
             {
                 Console.WriteLine("Textele sunt la fel");
             }
-            else 
+            else
             {
                 Console.WriteLine("Textele nu sunt la fel!");
             }
@@ -39,7 +39,7 @@ namespace IntroTraninigDay9
             {
                 Rez = text + number;
             }
-            else if(!text.Equals("FastTrackIT") && number >= 4)
+            else if (!text.Equals("FastTrackIT") && number >= 4)
             {
                 Rez = number + text;
             }
@@ -48,7 +48,7 @@ namespace IntroTraninigDay9
         public void Amount(int number)
         {
 
-            if (number > 8  || number == 6)
+            if (number > 8 || number == 6)
             {
                 Console.WriteLine("The amount of snow this winter was(cm): " + number);
             }
@@ -63,7 +63,7 @@ namespace IntroTraninigDay9
             {
                 Console.WriteLine("The number is greater than 3 and not equal to 4.");
             }
-            else if(number == 4)
+            else if (number == 4)
             {
                 Console.WriteLine("The number is equal to 4");
             }
@@ -104,7 +104,7 @@ namespace IntroTraninigDay9
             }
         }
 
-        public bool isNumberEven(int number)
+        public bool IsNumberEven(int number)
         {
             if (number % 2 == 0)
             {
@@ -115,7 +115,7 @@ namespace IntroTraninigDay9
                 return false;
             }
         }
-        public bool isEligibleToVote(int age)
+        public bool IsEligibleToVote(int age)
         {
             if (age < 18)
             {
@@ -126,16 +126,119 @@ namespace IntroTraninigDay9
                 return true;
             }
         }
-        public int theBiggestNumber(int x, int y, int z)
+        public int TheBiggestNumber(int x, int y, int z)
         {
             int max = x;
-            if(y > max)
+            if (y > max)
                 max = y;
             if (z > max)
                 max = z;
 
             return max;
         }
-        
+        public void Counting(int number)
+        {
+            for (int i = number; i <= 100; i++)
+            {
+                Console.WriteLine("Numaratoarea pana la 100 este " + i);
+            }
+        }
+        public void CountingNegative(int number)
+        {
+            for (int i = number; i >= -100; i--)
+            {
+                Console.WriteLine("Numaratoarea pana la -100 este " + i);
+            }
+        }
+        public void CountingBetweenNumbers(int m, int n)
+        {
+            Console.Write("Numaratoarea intre numere este ");
+
+            if (m < n)
+            {
+                for (int i = m; i <= n; i++)
+                    Console.Write(i + " ");
+            }
+            else
+            {
+                for (int i = m; i >= n; i--)
+                    Console.Write(i + " ");
+            }
+        }
+        public void CountingIncreasingNumbers(int m, int n)
+        {
+            Console.Write("Numaratoarea crescatoare este ");
+
+            if (m < n)
+            {
+                for (int i = m; i <= n; i++)
+                    Console.Write(i + " ");
+            }
+            else
+            {
+                for (int i = n; i <= m; i++)
+                    Console.Write(i + " ");
+            }
+        }
+
+        public void EvenNumbers()
+        {
+            Console.Write("Numaratoarea nr pare este ");
+
+            for (int i = 2; i <= 100; i = i + 2)
+                Console.Write(i + " ");
+        }
+        public void OddNumbers()
+        {
+            Console.Write("Numaratoarea nr impare este ");
+
+            for (int i = 1; i <= 100; i = i + 2)
+                Console.Write(i + " ");
+        }
+        public int SumNumbers(int n)
+        {
+            int suma = 0;
+
+            if (n <= 100)
+
+                for (int i = n; i <= 100; i++)
+                    suma = suma + i;
+
+            else
+                for (int i = n; i >= 100; i--)
+                    suma = suma + i;
+
+            return suma;
+
+        }
+        public float AverrageNumbers(int n)
+        {
+            int suma = 0;
+
+            if (n <= 100)
+            {
+                for (int i = n; i <= 100; i++)
+                    suma = suma + i;
+
+                return suma / (100 - n + 1);
+            }
+            else
+            {
+                for (int i = n; i >= 100; i--)
+                    suma = suma + i;
+
+                return suma / (n - 100 + 1);
+            }
+        }
+        public void Stars()
+        {
+           for (int i = 0; i < 7; i++)
+            {
+                for(int j = 7-i; j > 0; j--)
+                    Console.Write("*");
+
+                Console.WriteLine();
+            }
+        }
     }
 }

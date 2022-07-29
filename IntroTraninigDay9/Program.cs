@@ -35,13 +35,31 @@ namespace Exercies
 
             op.Case(6);
 
-            Console.WriteLine("Numarul este par(true) sau este impar(false): " + op.isNumberEven(3));
+            Console.WriteLine("Numarul este par(true) sau este impar(false): " + op.IsNumberEven(3));
 
-            Console.WriteLine("Persoana are sau nu are drept la vot: " + op.isEligibleToVote(18));
+            Console.WriteLine("Persoana are sau nu are drept la vot: " + op.IsEligibleToVote(18));
 
-            Console.WriteLine("Numarul mai mare este " + op.theBiggestNumber(18, 5, 90));
+            Console.WriteLine("Numarul mai mare este " + op.TheBiggestNumber(18, 5, 90));
 
-            Console.WriteLine(Model());
+            op.Counting(5);
+
+            op.CountingNegative(7);
+
+            op.CountingBetweenNumbers(10, 5);
+
+            op.CountingIncreasingNumbers(5,10);
+
+            op.EvenNumbers();
+
+            op.OddNumbers();
+
+            op.Stars();
+
+            Console.WriteLine("Suma pana la 100 este " + op.SumNumbers(140));
+
+            Console.WriteLine("Media pana la 100 este " + op.AverrageNumbers(140));
+
+            //Console.WriteLine(Model());
             Console.WriteLine("Media numerelor este: " + Average(25, 2, 4));
             Console.WriteLine("Restul Impartirii este: " + Modulo(5, 2));
 
