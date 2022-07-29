@@ -1,4 +1,6 @@
-﻿namespace Exercies
+﻿using IntroTraninigDay9;
+
+namespace Exercies
 {
     class Exercies
     {
@@ -11,19 +13,46 @@
             Operation2(55, 9, 9);
             Operation3(20, -3, 5, 8);
             Operation4(5, 15, 3, 2, 8, 3);
-            Console.WriteLine("Rezultatul adunarii este: " + Adunare(2, 3));
-            Console.WriteLine("Rezultatul Scaderii este: " + Scadere(3, 7));
-            Console.WriteLine("Rezultatul Inmultirii este: " + Inmultire(5, 5));
-            Console.WriteLine("Rezultatul Impartirii este: " + Impartire(25, 2));
+
+            Calculator c = new Calculator();
+            Console.WriteLine("Rezultatul adunarii este: " + c.Adunare(2, 3));
+            Console.WriteLine("Rezultatul Scaderii este: " + c.Scadere(3, 7));
+            Console.WriteLine("Rezultatul Inmultirii este: " + c.Inmultire(5, 5));
+            Console.WriteLine("Rezultatul Impartirii este: " + c.Impartire(25, 2));
+
+            LogicalOp op = new LogicalOp();
+
+            int biggest = op.CheckBiggerNumber(7, 8);
+            Console.WriteLine("Numarul mai mare este: " + biggest);
+
+            op.ComparisonText("FastIT");
+
+            Console.WriteLine("Rezultatul este: " + op.ComparisonTextAndNumber("FastIT", 4));
+
+            op.Amount(7);
+
+            op.ThreeAndFour(5);
+
+            op.Case(6);
+
+            Console.WriteLine("Numarul este par(true) sau este impar(false): " + op.isNumberEven(3));
+
+            Console.WriteLine("Persoana are sau nu are drept la vot: " + op.isEligibleToVote(18));
+
+            Console.WriteLine("Numarul mai mare este " + op.theBiggestNumber(18, 5, 90));
+
             Console.WriteLine(Model());
             Console.WriteLine("Media numerelor este: " + Average(25, 2, 4));
             Console.WriteLine("Restul Impartirii este: " + Modulo(5, 2));
+
             Console.WriteLine("Transforma Gradele Fahrenheit in Grade Celsius");
             float convertGrade = float.Parse(Console.ReadLine());
             Console.WriteLine("Temperatura in grade Celsius este: " + Fahrenheit(convertGrade));
+
             Console.WriteLine("Transforma Inch in Metrii");
             double convertInch = (float) double.Parse(Console.ReadLine());
             Console.WriteLine("Rezultatul transforamrii este " + Inch(convertInch) + " m");
+
             Viteza(1, 0, 0, 1000);
             Cerc(30);
 
@@ -65,27 +94,7 @@
             float w = x + y / z * u - r % t;
             Console.WriteLine("exercise 4c: " + w);
         }
-        public static int Adunare(int primulNumar, int alDoileaNumar)
-        {
-            int rezultat = primulNumar + alDoileaNumar;
-            return rezultat;
-        }
-        public static float Scadere(float primulNumar, float alDoileaNumar)
-        {
-            float rezultat = (float) primulNumar - alDoileaNumar;
-            return rezultat;
-        }
-        public static int Inmultire(int primulNumar, int alDoileaNumar)
-        {
-            int rezultat = primulNumar * alDoileaNumar;
-            return rezultat;
-        }
-        public static float Impartire(int primulNumar, int alDoileaNumar)
-        {
-            float rezultat = (float) primulNumar / alDoileaNumar;
-            return rezultat;
-        }
-
+       
         public static string Model()
         {
             String cSharp = "       C C C         /        /\n    C          -----/--------/-----\n    C              /        / \n    C             /        /\n    C        ----/--------/-----\n       C C C    /        /";
@@ -128,8 +137,7 @@
             double perimetrul = 2 * r * Math.PI;
 
             Console.WriteLine("Aria cercului " + aria);
-            Console.WriteLine("Perimetrul cercului " + perimetrul);
-            
+            Console.WriteLine("Perimetrul cercului " + perimetrul); 
         }
 
     }
