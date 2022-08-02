@@ -41,21 +41,42 @@ namespace Exercies
 
             Console.WriteLine("Numarul mai mare este " + op.TheBiggestNumber(18, 5, 90));
 
-            op.Counting(5);
+             op.Counting(5);
 
-            op.CountingNegative(7);
+             op.CountingNegative(7);
 
-            op.CountingBetweenNumbers(10, 5);
+             op.CountingBetweenNumbers(10, 5);
 
-            op.CountingIncreasingNumbers(5,10);
+             op.CountingIncreasingNumbers(5,10);
 
-            op.EvenNumbers();
+             op.EvenNumbers();
 
-            op.OddNumbers();
+             op.OddNumbers();
 
-            op.Stars();
+             op.Stars(); 
 
-            Console.WriteLine("Suma pana la 100 este " + op.SumNumbers(140));
+             op.Counting1(9);
+
+             op.CountingNegative1(7);
+
+             op.CountingBetweenNumbers1(10, 5);
+
+             op.CountingIncreasingNumbers1(7, 10);
+
+             op.EvenNumbers1(); 
+
+             op.OddNumbers1(); 
+
+            op.SumAverage(); 
+
+            Console.WriteLine("Numerele divizibile cu 7 sunt: " + op.Divisible(10, 30)); 
+
+            op.Fibonacci(); 
+            
+            op.CozaLozaWoza();
+
+
+            Console.WriteLine("\nSuma pana la 100 este " + op.SumNumbers(140));
 
             Console.WriteLine("Media pana la 100 este " + op.AverrageNumbers(140));
 
