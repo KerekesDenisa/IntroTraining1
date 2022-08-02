@@ -13,20 +13,41 @@ namespace IntroTraninigDay9
             int rezultat = primulNumar + alDoileaNumar;
             return rezultat;
         }
-        public float Scadere(float primulNumar, float alDoileaNumar)
+        public int Scadere(int primulNumar, int alDoileaNumar)
         {
             float rezultat = (float)primulNumar - alDoileaNumar;
-            return rezultat;
+            return (int) rezultat;
         }
         public int Inmultire(int primulNumar, int alDoileaNumar)
         {
             int rezultat = primulNumar * alDoileaNumar;
             return rezultat;
         }
-        public float Impartire(int primulNumar, int alDoileaNumar)
+        public int Impartire(int primulNumar, int alDoileaNumar)
         {
             float rezultat = (float)primulNumar / alDoileaNumar;
-            return rezultat;
+            return (int) rezultat;
         }
+        public float Adunare(float primulNumar, float alDoileaNumar)
+        {
+            float rezultat = primulNumar + alDoileaNumar;
+            return (float) rezultat;
+        }
+        public float Scadere(float primulNumar, float alDoileaNumar)
+        {
+            float rezultat = (float)primulNumar - alDoileaNumar;
+            return (float) rezultat;
+        }
+        public float Inmultire(float primulNumar, float alDoileaNumar)
+        {
+            float rezultat = primulNumar * alDoileaNumar;
+            return (float) rezultat;
+        }
+        public float Impartire(float primulNumar, float alDoileaNumar)
+        {
+            float rezultat = (float)primulNumar / alDoileaNumar;
+            return (float) rezultat;
+        }
+
     }
 }

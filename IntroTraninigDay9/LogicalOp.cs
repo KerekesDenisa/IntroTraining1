@@ -394,5 +394,95 @@ namespace IntroTraninigDay9
                 i++;
             }
         }
+
+        public void Array1H()
+        {
+            int[] arr = new int[100];
+            for (int i = 0; i < 100; i++)
+            {
+                arr[i] = i + 1;
+                Console.Write(arr[i] + " ");
+            }
+        }
+        public int[] EvenNumbers2(int[] arr)
+        {
+            int j = 0;
+            for (int i = 2; i <= 100; i = i + 2)
+            {
+
+                arr[j] = i;
+                j++;
+            }
+            return arr;
+        }
+
+        public float AverrageNumbers1(int[] arr)
+        {
+            int sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+                sum = sum + arr[i];
+            return (float)sum / arr.Length;
+        }
+        public bool FindWord(string[] arr, string text)
+        {
+            for (int i = 0; i < arr.Length; i++)
+                if (arr[i].Equals(text))
+                    return true;
+            return false;
+        }
+        public int NumberPosition(int[] arr, int nr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+                if (arr[i] == nr)
+                    return i;
+            return -1;
+        }
+        public void Grid()
+        {
+            string[] arr = new string[] { "-", "-", "-", "-", "-", "-", "-", "-", "-", "-" };
+            for (int j = 0; j < arr.Length; j++)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                    Console.Write(arr[i]);
+                Console.WriteLine();
+            }
+        }
+
+        public int[] WithoutNumber(int[] arr, int nr)
+        {
+            int i = 0;
+            while (i < arr.Length)
+            {
+                if (arr[i] == nr)
+                {
+                    for (int j = i; j < arr.Length - 1; j++)
+                        arr[j] = arr[j + 1];
+                    Array.Resize(ref arr, arr.Length - 1);
+                }
+
+                i++;
+            }
+            return arr;
+        }
+        public int SecondMinNumber(int[] arr)
+        {
+            int second = Int32.MaxValue, second2 = Int32.MaxValue;
+            for (int i = 0; i < arr.Length; i++)
+                if (arr[i] < second)
+                {
+                    second2 = second;
+                    second = arr[i];
+                }
+                else if (arr[i] < second2)
+                    second2 = arr[i];
+            return second2;
+        }
+
+        public int[] Transfer(int[] arr, int[] arrSecond)
+        {
+            for (int i = 0; i < arr.Length; i++)
+                arrSecond[i] = arr[i];
+            return arrSecond;
+        }
     }
 }
