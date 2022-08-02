@@ -13,7 +13,7 @@ namespace IntroTraninigDay9
             if (firstNumber > secondNumber)
             {
                 return firstNumber;
-            }
+            }   
             else
             {
                 return secondNumber;
@@ -238,6 +238,160 @@ namespace IntroTraninigDay9
                     Console.Write("*");
 
                 Console.WriteLine();
+            }
+        }
+        public void Counting1(int number)
+        {
+            Console.WriteLine("Numaratoarea pana la 100 este ");
+            while (number < 100)
+            {
+                Console.Write(number + " ");
+                number ++;
+            }
+        }
+        public void CountingNegative1(int number)
+        {
+            Console.WriteLine("\nNumaratoarea pana la -100 este ");
+            while (number > -100)
+            {
+                Console.Write(number + " ");
+                number--;
+            }
+        }
+        public void CountingBetweenNumbers1(int m, int n)
+        {
+            Console.Write("\nNumaratoarea intre numere este ");
+
+            while (m < n)
+            {
+                Console.Write(m + " ");
+                m++;
+            }
+            while (n < m)
+            {
+                Console.Write(m + " ");
+                m--;
+            }
+        }
+
+        public void CountingIncreasingNumbers1(int x, int y)
+        {
+            Console.Write("\nNumaratoarea crescatoare este ");
+
+            if (x <= y)
+                while (x <= y)
+                {
+                    Console.Write(x + " ");
+                    x++;
+                }
+
+            else while (y <= x)
+                {
+                    Console.Write(y + " ");
+                    y++;
+                }
+        }
+        public void EvenNumbers1()
+        {
+            Console.Write("\nNumaratoarea nr pare este ");
+
+            int i = 2;
+            while (i <= 100)
+            {
+                Console.Write(i + " ");
+                i = i + 2;
+            }
+        }
+        public void OddNumbers1()
+        {
+            Console.Write("\nNumaratoarea nr impare este ");
+
+            int i = 1;
+            while (i <= 100)
+            {
+                Console.Write(i + " ");
+                i = i + 2;
+            }
+        }
+        public void SumAverage()
+        {
+            int i = 111, s = 0, count = 0;
+            while (i <= 8899)
+            {
+                s = s + i;
+                count++;
+                i++;
+            }
+
+            Console.WriteLine("Sum: " + s);
+            Console.WriteLine("Average: " + ((float)s / count));
+        }
+        public float Divisible(int x, int y)
+        {
+            int cont = 0, suma = 0;
+            while (x <= y)
+            {
+                if (x % 7 == 0)
+                {
+                    suma = suma + x;
+                    cont++;
+
+                }
+                x++;
+            }
+
+            while (y <= x)
+            {
+                if (y % 7 == 0)
+                {
+                    suma = suma + y;
+                    cont++;
+
+                }
+                y++;
+            }
+
+            return (float)suma / cont;
+        }
+
+        public void Fibonacci()
+        {
+            int x = 0, y = 1, z = 0, cont = 2;
+            Console.Write("Sirul lui Fibonacci: " + x + " " + y);
+            while (cont < 20)
+            {
+                z = x + y;
+                x = y;
+                y = z;
+                Console.Write(" " + z);
+                cont++;
+            }
+        }
+
+        public void CozaLozaWoza()
+        {
+            int i = 1;
+            while (i <= 110)
+            {
+                if (i % 105 == 0)
+                    Console.Write("\nCozaLozaWoza ");
+                else if (i % 35 == 0)
+                    Console.Write("\nWozaLoza ");
+                else if (i % 21 == 0)
+                    Console.Write("\nCozaWoza ");
+                else if (i % 15 == 0)
+                    Console.Write("\nCozaLoza  ");
+                else if (i % 7 == 0)
+                    Console.Write("\nWoza  ");
+                else if (i % 5 == 0)
+                    Console.Write("\nLoza  ");
+                else if (i % 3 == 0)
+                    Console.Write("\nCoza  ");
+                else Console.Write(i + " ");
+                if (i % 11 == 0)
+                    Console.WriteLine();
+
+                i++;
             }
         }
     }
