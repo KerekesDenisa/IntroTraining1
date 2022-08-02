@@ -20,9 +20,55 @@ namespace Exercies
             Console.WriteLine("Rezultatul Inmultirii este: " + c.Inmultire(5, 5));
             Console.WriteLine("Rezultatul Impartirii este: " + c.Impartire(25, 2));
 
+            Console.WriteLine("Rezultatul adunarii este: " + c.Adunare(2.5f, 3.5f));
+            Console.WriteLine("Rezultatul Scaderii este: " + c.Scadere(3.1f, 7.5f));
+            Console.WriteLine("Rezultatul Inmultirii este: " + c.Inmultire(5.3f, 5.6f));
+            Console.WriteLine("Rezultatul Impartirii este: " + c.Impartire(25.6f, 2.1f));
+
             LogicalOp op = new LogicalOp();
 
-            int biggest = op.CheckBiggerNumber(7, 8);
+            Console.Write("\nArray de 100 de pozitii: ");
+            op.Array1H();
+            Console.WriteLine();
+
+            Console.Write("\nValorile pare de la 1 la 100: ");
+            int[] arr = new int[50];
+            arr = op.EvenNumbers2(arr);
+            for (int i = 0; i < arr.Length; i++)
+                Console.Write(arr[i] + " ");
+
+            
+            arr = new int[] { 1, 72, 15, 2, 36, 10,96 };
+            Console.WriteLine("\nMedia numerelor:" + op.AverrageNumbers1(arr));
+
+            string[] arrString = new string[] { "poate",  "mi-e", "somn", "sau", "poate", "glumesc"};
+            Console.WriteLine(op.FindWord(arrString, "mie"));
+            Console.WriteLine(op.FindWord(arrString, "somn"));
+
+            arr = new int[] { 1, 7, 5, 88, 6, 71 };
+            Console.WriteLine("Pozitia nr:" + op.NumberPosition(arr, 5));
+            Console.WriteLine("Pozitia nr:" + op.NumberPosition(arr, 10));
+
+            op.Grid();
+
+            arr = new int[] { 45, 63, 6, 12, 23, 58 };
+            arr = op.WithoutNumber(arr, 12);
+            for (int i = 0; i < arr.Length; i++)
+                Console.Write(arr[i] + " ");
+
+            
+            arr = new int[] { 45, 63, 6, 12, 23, 58 };
+            Console.WriteLine("\nSecond Min Number: " + op.SecondMinNumber(arr));
+
+
+            arr = new int[] { 45, 63, 6, 12, 23, 58 };
+            int[] arrSecond = new int[arr.Length];
+            arrSecond = op.Transfer(arr, arrSecond);
+            for (int i = 0; i < arrSecond.Length; i++)
+                Console.Write(arrSecond[i] + " ");
+
+
+            /*int biggest = op.CheckBiggerNumber(7, 8);
             Console.WriteLine("Numarul mai mare este: " + biggest);
 
             op.ComparisonText("FastIT");
@@ -93,7 +139,9 @@ namespace Exercies
             Console.WriteLine("Rezultatul transforamrii este " + Inch(convertInch) + " m");
 
             Viteza(1, 0, 0, 1000);
-            Cerc(30);
+            Cerc(30); */
+
+
 
         }
         public static void Greet()
